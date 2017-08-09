@@ -13,11 +13,7 @@ create table JK_LOG
   jk_return_xml  CLOB,
   jk_return_code VARCHAR2(10),
   jk_return_msg  VARCHAR2(500)
-)
-tablespace USERS
-  pctfree 10
-  initrans 1
-  maxtrans 255;
+);
 -- Add comments to the table 
 comment on table JK_LOG
   is '接口日志表';
@@ -48,9 +44,4 @@ comment on column JK_LOG.jk_return_msg
   is '返回信息';
 -- Create/Recreate primary, unique and foreign key constraints 
 alter table JK_LOG
-  add constraint PK_JK_LOG primary key (JK_ID)
-  using index 
-  tablespace USERS
-  pctfree 10
-  initrans 2
-  maxtrans 255;
+  add constraint PK_JK_LOG primary key (JK_ID);
