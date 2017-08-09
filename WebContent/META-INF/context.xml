@@ -1,0 +1,13 @@
+<Context>
+	<Resource 
+		name="jdbc/webservice" 
+		type="javax.sql.DataSource" 
+		driverClassName="oracle.jdbc.driver.OracleDriver" 
+		maxIdle="2" 
+		maxWait="5000" 
+		validationQuery="select 1 from dual" 
+		username="hztrn" 
+		password="HZTRN_ORAINF"
+		url="jdbc:oracle:thin:@172.16.18.2:1527:oraf" 
+		maxActive="10"/>
+</Context>
